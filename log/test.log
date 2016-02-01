@@ -1,0 +1,339 @@
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:01:53 -0700
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 09:01:53 -0700
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:01:53 -0700
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 09:01:53 -0700
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:01:53 -0700
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:16:35 -0700
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 09:16:35 -0700
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:16:35 -0700
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 09:16:35 -0700
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:16:35 -0700
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "bears" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160201161657')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:18:24 -0700
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 09:18:24 -0700
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:18:24 -0700
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 09:18:24 -0700
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:18:24 -0700
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:26:15 -0700
+Processing by BearsController#index as HTML
+  [1m[36mBear Load (0.2ms)[0m  [1mSELECT "bears".* FROM "bears"[0m
+  Rendered bears/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1031ms (Views: 1023.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 09:26:16 -0700
+Processing by BearsController#index as HTML
+  [1m[35mBear Load (0.1ms)[0m  SELECT "bears".* FROM "bears"
+  Rendered bears/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:26:16 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 7ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 09:26:16 -0700
+Processing by BearsController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:26:16 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:37:26 -0700
+Processing by BearsController#index as HTML
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT "bears".* FROM "bears"[0m
+  Rendered bears/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 174ms (Views: 167.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 09:37:27 -0700
+Processing by BearsController#index as HTML
+  [1m[35mBear Load (0.1ms)[0m  SELECT "bears".* FROM "bears"
+  Rendered bears/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:37:27 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 09:37:27 -0700
+Processing by BearsController#new as HTML
+  Rendered bears/_form.html.erb (10.1ms)
+  Rendered bears/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:37:27 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:38:05 -0700
+Processing by BearsController#index as HTML
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT "bears".* FROM "bears"[0m
+  Rendered bears/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 188ms (Views: 180.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 09:38:05 -0700
+Processing by BearsController#index as HTML
+  [1m[35mBear Load (0.1ms)[0m  SELECT "bears".* FROM "bears"
+  Rendered bears/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:38:05 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 09:38:05 -0700
+Processing by BearsController#new as HTML
+  Rendered bears/_form.html.erb (10.9ms)
+  Rendered bears/new.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:38:05 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:38:21 -0700
+Processing by BearsController#index as HTML
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT "bears".* FROM "bears"[0m
+  Rendered bears/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 188ms (Views: 180.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 09:38:21 -0700
+Processing by BearsController#index as HTML
+  [1m[35mBear Load (0.1ms)[0m  SELECT "bears".* FROM "bears"
+  Rendered bears/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:38:21 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.2ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 09:38:21 -0700
+Processing by BearsController#new as HTML
+  Rendered bears/_form.html.erb (12.9ms)
+  Rendered bears/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:38:21 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:39:34 -0700
+Processing by BearsController#index as HTML
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT "bears".* FROM "bears"[0m
+  Rendered bears/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 187ms (Views: 178.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 09:39:34 -0700
+Processing by BearsController#index as HTML
+  [1m[35mBear Load (0.1ms)[0m  SELECT "bears".* FROM "bears"
+  Rendered bears/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:39:34 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 09:39:34 -0700
+Processing by BearsController#new as HTML
+  Rendered bears/_form.html.erb (11.8ms)
+  Rendered bears/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:39:34 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:45:19 -0700
+Processing by BearsController#index as HTML
+  [1m[36mBear Load (0.2ms)[0m  [1mSELECT "bears".* FROM "bears"[0m
+  Rendered bears/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 185ms (Views: 177.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 09:45:19 -0700
+Processing by BearsController#index as HTML
+  [1m[35mBear Load (0.1ms)[0m  SELECT "bears".* FROM "bears"
+  Rendered bears/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:45:19 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 09:45:19 -0700
+Processing by BearsController#new as HTML
+  Rendered bears/_form.html.erb (10.6ms)
+  Rendered bears/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:45:19 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:45:54 -0700
+Processing by BearsController#index as HTML
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT "bears".* FROM "bears"[0m
+  Rendered bears/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 185ms (Views: 177.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 09:45:54 -0700
+Processing by BearsController#index as HTML
+  [1m[35mBear Load (0.1ms)[0m  SELECT "bears".* FROM "bears"
+  Rendered bears/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:45:54 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 09:45:54 -0700
+Processing by BearsController#new as HTML
+  Rendered bears/_form.html.erb (11.5ms)
+  Rendered bears/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:45:54 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/" for 127.0.0.1 at 2016-02-01 09:46:16 -0700
+Processing by BearsController#index as HTML
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT "bears".* FROM "bears"[0m
+  Rendered bears/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 185ms (Views: 176.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears" for 127.0.0.1 at 2016-02-01 09:46:17 -0700
+Processing by BearsController#index as HTML
+  [1m[35mBear Load (0.1ms)[0m  SELECT "bears".* FROM "bears"
+  Rendered bears/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:46:17 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBear Load (0.1ms)[0m  [1mSELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/new" for 127.0.0.1 at 2016-02-01 09:46:17 -0700
+Processing by BearsController#new as HTML
+  Rendered bears/_form.html.erb (11.9ms)
+  Rendered bears/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/bears/1/edit" for 127.0.0.1 at 2016-02-01 09:46:17 -0700
+Processing by BearsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBear Load (0.1ms)[0m  SELECT  "bears".* FROM "bears" WHERE "bears"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m

@@ -1,0 +1,7 @@
+<%= link_to 'New Bear', new_bear_path %>
+<% @bears.each do |bear| %>
+
+  <p><%= bear.id %>:<a href="<%= bear_url(bear) %>"><%= bear.name %> : <%= bear.description %></p>
+    <%= link_to "Edit Bear", edit_bear_path(bear) %> | <%= link_to "Delete Bear", bear_path(bear), method: :delete, data: { confirm: "Will destroy #{bear.name}. Are you sure?"} %>
+
+<% end %>
